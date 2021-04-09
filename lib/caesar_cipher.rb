@@ -10,7 +10,7 @@ def caesar word, shift_number
       up = true
       letter = letter.downcase
     end
-    
+
     if alphabet.include?(letter)
       alpha_index = alphabet.index(letter)
       shifted_index = (alpha_index + shift_number) % 26
@@ -28,7 +28,8 @@ def caesar word, shift_number
   end
 
   word = word.join('')
-  puts "'#{word}' becomes: '#{caesar_word}'"
+  caesar_word
+  # puts "'#{word}' becomes: '#{caesar_word}'"
 end
 
 puts "Enter a string:"
@@ -36,4 +37,4 @@ word = gets.chomp
 puts "Enter a number"
 shift_number = gets.chomp.to_i
 
-caesar word, shift_number
+puts "#{word} becomes: #{caesar word, shift_number}"
